@@ -1,0 +1,182 @@
+version 3
+run HighLoad-0-20240521-01:37:39-6252
+attr configname HighLoad
+attr datetime 20240521-01:37:39
+attr datetimef 20240521-013739
+attr experiment HighLoad
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network NetworkSecurityModel
+attr processid 6252
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 67890
+config image-path ../../inet4.5/images
+config description "High load configuration with 5 runs"
+config repeat 5
+config sim-time-limit 1000s
+config *.userDevice.sendInterval "uniform(0.5s, 1.0s)"
+config *.externalFirewall.ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+config *.ids.detectionRules "\"detect-all\""
+config *.ids.alertInterval "uniform(0.5s, 1.5s)"
+config *.ids.falsePositiveRate 0.02
+config *.ids.falseNegativeRate 0.01
+config *.financeVulnerabilityScanner.tool "\"Nessus\""
+config *.financeVulnerabilityScanner.scanInterval "uniform(40s, 60s)"
+config *.creditCardVulnerabilityScanner.tool "\"OpenVAS\""
+config *.creditCardVulnerabilityScanner.scanInterval "uniform(40s, 60s)"
+config *.financeInternalFirewall.ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+config *.creditCardInternalFirewall.ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+config *.financeEndpoint.isProtected true
+config *.financeEndpoint.accessPolicy "\"strict\""
+config *.creditCardEndpoint.isProtected true
+config *.creditCardEndpoint.accessPolicy "\"strict\""
+config *.financeDatabase.isProtected true
+config *.financeDatabase.accessPolicy "\"strict\""
+config *.creditCardDatabase.isProtected true
+config *.creditCardDatabase.accessPolicy "\"strict\""
+config *.financeDBA.monitorActivity true
+config *.financeDBA.accessControlPolicy "\"hybrid\""
+config *.creditCardDBA.monitorActivity true
+config *.creditCardDBA.accessControlPolicy "\"hybrid\""
+config *.financeDummySink.collectStatistics true
+config *.creditCardDummySink.collectStatistics true
+config *.trafficGenerator.messageFrequency "uniform(0.3s, 1.0s)"
+config *.trafficGenerator.messageSize "uniform(512B, 4096B)"
+config *.userDevice.initialLoad "uniform(0.2, 0.7)"
+config *.userDevice.loadIncreaseRate "uniform(0.02, 0.07)"
+config output-vector-file results/highload_vectors.vec
+config output-scalar-file results/highload_scalars.sca
+config **.scalar-recording true
+config **.vector-recording true
+config rng-class omnetpp::cMersenneTwister
+config seed-set 67890
+config *.externalFirewall.packetDropRate.record true
+config *.ids.intrusionDetectionRate.record true
+config *.ids.falsePositiveRate.record true
+config *.ids.falseNegativeRate.record true
+config *.financeVulnerabilityScanner.scanSuccessRate.record true
+config *.creditCardVulnerabilityScanner.scanSuccessRate.record true
+config *.financeInternalFirewall.packetDropRate.record true
+config *.creditCardInternalFirewall.packetDropRate.record true
+config *.financeEndpoint.responseTime.record true
+config *.creditCardEndpoint.responseTime.record true
+config *.financeDatabase.querySuccessRate.record true
+config *.creditCardDatabase.querySuccessRate.record true
+config *.financeDBA.accessControlViolations.record true
+config *.creditCardDBA.accessControlViolations.record true
+config network NetworkSecurityModel
+config sim-time-limit 500s
+config repeat 10
+config *.userDevice.sendInterval "uniform(0.8s, 1.2s)"
+config *.externalFirewall.ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+config *.ids.detectionRules "\"detect-all\""
+config *.ids.alertInterval "uniform(1s, 3s)"
+config *.ids.falsePositiveRate 0.01
+config *.ids.falseNegativeRate 0.005
+config *.financeVulnerabilityScanner.tool "\"Nessus\""
+config *.financeVulnerabilityScanner.scanInterval "uniform(50s, 70s)"
+config *.creditCardVulnerabilityScanner.tool "\"OpenVAS\""
+config *.creditCardVulnerabilityScanner.scanInterval "uniform(50s, 70s)"
+config *.financeInternalFirewall.ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+config *.creditCardInternalFirewall.ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+config *.financeEndpoint.isProtected true
+config *.financeEndpoint.accessPolicy "\"strict\""
+config *.creditCardEndpoint.isProtected true
+config *.creditCardEndpoint.accessPolicy "\"strict\""
+config *.financeDatabase.isProtected true
+config *.financeDatabase.accessPolicy "\"strict\""
+config *.creditCardDatabase.isProtected true
+config *.creditCardDatabase.accessPolicy "\"strict\""
+config *.financeDBA.monitorActivity true
+config *.financeDBA.accessControlPolicy "\"hybrid\""
+config *.creditCardDBA.monitorActivity true
+config *.creditCardDBA.accessControlPolicy "\"hybrid\""
+config *.financeDummySink.collectStatistics true
+config *.creditCardDummySink.collectStatistics true
+config *.trafficGenerator.messageFrequency "uniform(0.5s, 2s)"
+config *.trafficGenerator.messageSize "uniform(512B, 2048B)"
+config *.userDevice.initialLoad "uniform(0.1, 0.5)"
+config *.userDevice.loadIncreaseRate "uniform(0.01, 0.05)"
+config *.ddosAttacker[0].attackInterval "uniform(0.05s, 0.1s)"
+config *.ddosAttacker[1].attackInterval "uniform(0.05s, 0.1s)"
+config output-vector-file results/vectors.vec
+config output-scalar-file results/scalars.sca
+config **.scalar-recording true
+config **.vector-recording true
+config rng-class omnetpp::cMersenneTwister
+config seed-set 12345
+config *.externalFirewall.packetDropRate.record true
+config *.ids.intrusionDetectionRate.record true
+config *.ids.falsePositiveRate.record true
+config *.ids.falseNegativeRate.record true
+config *.financeVulnerabilityScanner.scanSuccessRate.record true
+config *.creditCardVulnerabilityScanner.scanSuccessRate.record true
+config *.financeInternalFirewall.packetDropRate.record true
+config *.creditCardInternalFirewall.packetDropRate.record true
+config *.financeEndpoint.responseTime.record true
+config *.creditCardEndpoint.responseTime.record true
+config *.financeDatabase.querySuccessRate.record true
+config *.creditCardDatabase.querySuccessRate.record true
+config *.financeDBA.accessControlViolations.record true
+config *.creditCardDBA.accessControlViolations.record true
+
+par NetworkSecurityModel.userDevice typename "\"userDevice\""
+par NetworkSecurityModel.userDevice sendInterval 1s
+attr unit s
+par NetworkSecurityModel.externalFirewall typename "\"ExternalFirewall\""
+par NetworkSecurityModel.externalFirewall ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+par NetworkSecurityModel.dmz typename "\"DMZ\""
+par NetworkSecurityModel.ids typename "\"IDS\""
+par NetworkSecurityModel.ids detectionRules "\"detect-all\""
+par NetworkSecurityModel.financeSwitch typename "\"Switch\""
+par NetworkSecurityModel.financeSwitch numPorts 1
+attr prompt "Number of ports"
+par NetworkSecurityModel.creditCardSwitch typename "\"Switch\""
+par NetworkSecurityModel.creditCardSwitch numPorts 1
+attr prompt "Number of ports"
+par NetworkSecurityModel.financeInternalFirewall typename "\"InternalFirewall\""
+par NetworkSecurityModel.financeInternalFirewall ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+par NetworkSecurityModel.creditCardInternalFirewall typename "\"InternalFirewall\""
+par NetworkSecurityModel.creditCardInternalFirewall ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+par NetworkSecurityModel.financeEndpoint typename "\"Endpoint\""
+par NetworkSecurityModel.financeEndpoint isProtected true
+par NetworkSecurityModel.financeEndpoint accessPolicy "\"strict\""
+par NetworkSecurityModel.creditCardEndpoint typename "\"Endpoint\""
+par NetworkSecurityModel.creditCardEndpoint isProtected true
+par NetworkSecurityModel.creditCardEndpoint accessPolicy "\"strict\""
+par NetworkSecurityModel.financeDatabase typename "\"Database\""
+par NetworkSecurityModel.financeDatabase isProtected true
+par NetworkSecurityModel.financeDatabase accessPolicy "\"strict\""
+par NetworkSecurityModel.creditCardDatabase typename "\"Database\""
+par NetworkSecurityModel.creditCardDatabase isProtected true
+par NetworkSecurityModel.creditCardDatabase accessPolicy "\"strict\""
+par NetworkSecurityModel.financeDBA typename "\"DBA\""
+par NetworkSecurityModel.financeDBA monitorActivity true
+par NetworkSecurityModel.financeDBA accessControlPolicy "\"hybrid\""
+par NetworkSecurityModel.creditCardDBA typename "\"DBA\""
+par NetworkSecurityModel.creditCardDBA monitorActivity true
+par NetworkSecurityModel.creditCardDBA accessControlPolicy "\"hybrid\""
+par NetworkSecurityModel.financeVulnerabilityScanner typename "\"VulnerabilityScanner\""
+par NetworkSecurityModel.financeVulnerabilityScanner tool "\"Nessus\""
+par NetworkSecurityModel.financeVulnerabilityScanner scanInterval 60s
+attr unit s
+par NetworkSecurityModel.creditCardVulnerabilityScanner typename "\"VulnerabilityScanner\""
+par NetworkSecurityModel.creditCardVulnerabilityScanner tool "\"OpenVAS\""
+par NetworkSecurityModel.creditCardVulnerabilityScanner scanInterval 60s
+attr unit s
+par NetworkSecurityModel.financeDummySink typename "\"DummySink\""
+par NetworkSecurityModel.creditCardDummySink typename "\"DummySink\""
+par NetworkSecurityModel.ddosAttacker[0] typename "\"DDoSAttacker\""
+par NetworkSecurityModel.ddosAttacker[0] attackInterval 0.0684287s
+attr unit s
+par NetworkSecurityModel.ddosAttacker[1] typename "\"DDoSAttacker\""
+par NetworkSecurityModel.ddosAttacker[1] attackInterval 0.0581642s
+attr unit s
+par NetworkSecurityModel typename "\"NetworkSecurityModel\""
+

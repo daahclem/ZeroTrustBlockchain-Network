@@ -1,0 +1,416 @@
+version 3
+run General-0-20240614-22:24:26-29472
+attr configname General
+attr datetime 20240614-22:24:26
+attr datetimef 20240614-222426
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network NetworkSecurityModel
+attr processid 29472
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config network NetworkSecurityModel
+config sim-time-limit 3600s
+config *.sendInterval 1s
+config *.scanInterval 60s
+config *.userDevice.sendInterval 1s
+config *.externalFirewall.ruleSet "\"default-deny; allow from NetworkSecurityModel.IAMWithBlockchain.secureChannel; allow from NetworkSecurityModel.userDevice; allow from NetworkSecurityModel.internet\""
+config *.internet.someParameter "\"value\""
+config *.dmz.someParameter "\"value\""
+config *.ids.detectionRules "\"detect-all\""
+config *.financeSwitch.numPorts 1
+config *.creditCardSwitch.numPorts 1
+config *.financeInternalFirewall.ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+config *.creditCardInternalFirewall.ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+config *.financeEndpoint.isProtected true
+config *.financeEndpoint.accessPolicy "\"strict\""
+config *.creditCardEndpoint.isProtected true
+config *.creditCardEndpoint.accessPolicy "\"strict\""
+config *.financeDatabase.isProtected true
+config *.financeDatabase.accessPolicy "\"strict\""
+config *.creditCardDatabase.isProtected true
+config *.creditCardDatabase.accessPolicy "\"strict\""
+config *.financeDBA.monitorActivity true
+config *.financeDBA.accessControlPolicy "\"hybrid\""
+config *.creditCardDBA.monitorActivity true
+config *.creditCardDBA.accessControlPolicy "\"hybrid\""
+config *.financeVulnerabilityScanner.tool "\"Nessus\""
+config *.financeVulnerabilityScanner.scanInterval 60s
+config *.creditCardVulnerabilityScanner.tool "\"OpenVAS\""
+config *.creditCardVulnerabilityScanner.scanInterval 60s
+config *.ddosAttacker[0].attackRate 1000
+config *.ddosAttacker[1].attackRate 1000
+config *.attacker.attackType "\"injection\""
+config *.attacker.attackInterval 2s
+config *.IAMWithBlockchain.blockchain.blockchainNetworkName "\"BankChain\""
+config *.IAMWithBlockchain.idProvider.mfaToken "\"defaultMFA\""
+config *.IAMWithBlockchain.mfa.mfaType "\"OTP\""
+config *.IAMWithBlockchain.hybridAccessControl.rbacPolicy "\"defaultRBAC\""
+config *.IAMWithBlockchain.hybridAccessControl.abacPolicy "\"defaultABAC\""
+config *.IAMWithBlockchain.hybridAccessControl.dacPolicy "\"defaultDAC\""
+config *.IAMWithBlockchain.hybridAccessControl.macPolicy "\"defaultMAC\""
+config *.IAMWithBlockchain.smartContract.contractName "\"accessControlContract\""
+config output-vector-file results/vectors.vec
+config output-scalar-file results/scalars.sca
+config **.scalar-recording true
+config **.vector-recording true
+
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1
+scalar NetworkSecurityModel.financeDummySink receivedMessages 1

@@ -1,0 +1,175 @@
+version 3
+run WithLessStrictRules-0-20240517-23:23:18-29740
+attr configname WithLessStrictRules
+attr datetime 20240517-23:23:18
+attr datetimef 20240517-232318
+attr experiment WithLessStrictRules
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network NetworkSecurityModel
+attr processid 29740
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config description "Simulation with less strict rules for testing."
+config **.externalFirewall.ruleSet "\"allow from 192.168.1.0/24; allow from 192.168.2.0/24\""
+config **.financeInternalFirewall.ruleSet "\"allow from 10.1.0.0/16; allow from 10.1.1.0/24\""
+config **.creditCardInternalFirewall.ruleSet "\"allow from 10.2.0.0/16; allow from 10.2.1.0/24\""
+config network NetworkSecurityModel
+config sim-time-limit 300s
+config **.externalFirewall.ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+config **.ids.detectionRules "\"detect-all\""
+config **.financeInternalFirewall.ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+config **.creditCardInternalFirewall.ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+config **.financeEndpoint.isProtected true
+config **.financeEndpoint.accessPolicy "\"strict\""
+config **.creditCardEndpoint.isProtected true
+config **.creditCardEndpoint.accessPolicy "\"strict\""
+config **.financeDatabase.isProtected true
+config **.financeDatabase.accessPolicy "\"strict\""
+config **.creditCardDatabase.isProtected true
+config **.creditCardDatabase.accessPolicy "\"strict\""
+config **.financeSwitch.numPorts 4
+config **.creditCardSwitch.numPorts 4
+
+par NetworkSecurityModel.userDevice typename "\"userDevice\""
+par NetworkSecurityModel.userDevice sendInterval 1s
+attr unit s
+par NetworkSecurityModel.externalFirewall typename "\"ExternalFirewall\""
+par NetworkSecurityModel.externalFirewall ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+par NetworkSecurityModel.dmz typename "\"DMZ\""
+par NetworkSecurityModel.ids typename "\"IDS\""
+par NetworkSecurityModel.ids detectionRules "\"detect-all\""
+par NetworkSecurityModel.financeSwitch typename "\"Switch\""
+par NetworkSecurityModel.financeSwitch numPorts 1
+attr prompt "Number of ports"
+par NetworkSecurityModel.creditCardSwitch typename "\"Switch\""
+par NetworkSecurityModel.creditCardSwitch numPorts 1
+attr prompt "Number of ports"
+par NetworkSecurityModel.financeInternalFirewall typename "\"InternalFirewall\""
+par NetworkSecurityModel.financeInternalFirewall ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+par NetworkSecurityModel.creditCardInternalFirewall typename "\"InternalFirewall\""
+par NetworkSecurityModel.creditCardInternalFirewall ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+par NetworkSecurityModel.financeEndpoint typename "\"Endpoint\""
+par NetworkSecurityModel.financeEndpoint isProtected true
+par NetworkSecurityModel.financeEndpoint accessPolicy "\"strict\""
+par NetworkSecurityModel.creditCardEndpoint typename "\"Endpoint\""
+par NetworkSecurityModel.creditCardEndpoint isProtected true
+par NetworkSecurityModel.creditCardEndpoint accessPolicy "\"strict\""
+par NetworkSecurityModel.financeDatabase typename "\"Database\""
+par NetworkSecurityModel.financeDatabase isProtected true
+par NetworkSecurityModel.financeDatabase accessPolicy "\"strict\""
+par NetworkSecurityModel.creditCardDatabase typename "\"Database\""
+par NetworkSecurityModel.creditCardDatabase isProtected true
+par NetworkSecurityModel.creditCardDatabase accessPolicy "\"strict\""
+par NetworkSecurityModel.financeDBA typename "\"DBA\""
+par NetworkSecurityModel.financeDBA monitorActivity true
+par NetworkSecurityModel.financeDBA accessControlPolicy "\"hybrid\""
+par NetworkSecurityModel.creditCardDBA typename "\"DBA\""
+par NetworkSecurityModel.creditCardDBA monitorActivity true
+par NetworkSecurityModel.creditCardDBA accessControlPolicy "\"hybrid\""
+par NetworkSecurityModel.financeVulnerabilityScanner typename "\"VulnerabilityScanner\""
+par NetworkSecurityModel.financeVulnerabilityScanner tool "\"Nessus\""
+par NetworkSecurityModel.financeVulnerabilityScanner scanInterval 60s
+attr unit s
+par NetworkSecurityModel.creditCardVulnerabilityScanner typename "\"VulnerabilityScanner\""
+par NetworkSecurityModel.creditCardVulnerabilityScanner tool "\"OpenVAS\""
+par NetworkSecurityModel.creditCardVulnerabilityScanner scanInterval 60s
+attr unit s
+par NetworkSecurityModel.financeDummySink typename "\"DummySink\""
+par NetworkSecurityModel.creditCardDummySink typename "\"DummySink\""
+par NetworkSecurityModel typename "\"NetworkSecurityModel\""
+
+run WithLessStrictRules-0-20240517-23:40:34-17108
+attr configname WithLessStrictRules
+attr datetime 20240517-23:40:34
+attr datetimef 20240517-234034
+attr experiment WithLessStrictRules
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network NetworkSecurityModel
+attr processid 17108
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config description "Simulation with less strict rules for testing."
+config **.externalFirewall.ruleSet "\"allow from 192.168.1.0/24; allow from 192.168.2.0/24\""
+config **.financeInternalFirewall.ruleSet "\"allow from 10.1.0.0/16; allow from 10.1.1.0/24\""
+config **.creditCardInternalFirewall.ruleSet "\"allow from 10.2.0.0/16; allow from 10.2.1.0/24\""
+config network NetworkSecurityModel
+config sim-time-limit 300s
+config **.externalFirewall.ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+config **.ids.detectionRules "\"detect-all\""
+config **.financeInternalFirewall.ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+config **.creditCardInternalFirewall.ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+config **.financeEndpoint.isProtected true
+config **.financeEndpoint.accessPolicy "\"strict\""
+config **.creditCardEndpoint.isProtected true
+config **.creditCardEndpoint.accessPolicy "\"strict\""
+config **.financeDatabase.isProtected true
+config **.financeDatabase.accessPolicy "\"strict\""
+config **.creditCardDatabase.isProtected true
+config **.creditCardDatabase.accessPolicy "\"strict\""
+config **.financeSwitch.numPorts 4
+config **.creditCardSwitch.numPorts 4
+
+par NetworkSecurityModel.userDevice typename "\"userDevice\""
+par NetworkSecurityModel.userDevice sendInterval 1s
+attr unit s
+par NetworkSecurityModel.externalFirewall typename "\"ExternalFirewall\""
+par NetworkSecurityModel.externalFirewall ruleSet "\"default-deny; allow from 192.168.1.0/24\""
+par NetworkSecurityModel.dmz typename "\"DMZ\""
+par NetworkSecurityModel.ids typename "\"IDS\""
+par NetworkSecurityModel.ids detectionRules "\"detect-all\""
+par NetworkSecurityModel.financeSwitch typename "\"Switch\""
+par NetworkSecurityModel.financeSwitch numPorts 1
+attr prompt "Number of ports"
+par NetworkSecurityModel.creditCardSwitch typename "\"Switch\""
+par NetworkSecurityModel.creditCardSwitch numPorts 1
+attr prompt "Number of ports"
+par NetworkSecurityModel.financeInternalFirewall typename "\"InternalFirewall\""
+par NetworkSecurityModel.financeInternalFirewall ruleSet "\"default-deny; allow from 10.1.0.0/16\""
+par NetworkSecurityModel.creditCardInternalFirewall typename "\"InternalFirewall\""
+par NetworkSecurityModel.creditCardInternalFirewall ruleSet "\"default-deny; allow from 10.2.0.0/16\""
+par NetworkSecurityModel.financeEndpoint typename "\"Endpoint\""
+par NetworkSecurityModel.financeEndpoint isProtected true
+par NetworkSecurityModel.financeEndpoint accessPolicy "\"strict\""
+par NetworkSecurityModel.creditCardEndpoint typename "\"Endpoint\""
+par NetworkSecurityModel.creditCardEndpoint isProtected true
+par NetworkSecurityModel.creditCardEndpoint accessPolicy "\"strict\""
+par NetworkSecurityModel.financeDatabase typename "\"Database\""
+par NetworkSecurityModel.financeDatabase isProtected true
+par NetworkSecurityModel.financeDatabase accessPolicy "\"strict\""
+par NetworkSecurityModel.creditCardDatabase typename "\"Database\""
+par NetworkSecurityModel.creditCardDatabase isProtected true
+par NetworkSecurityModel.creditCardDatabase accessPolicy "\"strict\""
+par NetworkSecurityModel.financeDBA typename "\"DBA\""
+par NetworkSecurityModel.financeDBA monitorActivity true
+par NetworkSecurityModel.financeDBA accessControlPolicy "\"hybrid\""
+par NetworkSecurityModel.creditCardDBA typename "\"DBA\""
+par NetworkSecurityModel.creditCardDBA monitorActivity true
+par NetworkSecurityModel.creditCardDBA accessControlPolicy "\"hybrid\""
+par NetworkSecurityModel.financeVulnerabilityScanner typename "\"VulnerabilityScanner\""
+par NetworkSecurityModel.financeVulnerabilityScanner tool "\"Nessus\""
+par NetworkSecurityModel.financeVulnerabilityScanner scanInterval 60s
+attr unit s
+par NetworkSecurityModel.creditCardVulnerabilityScanner typename "\"VulnerabilityScanner\""
+par NetworkSecurityModel.creditCardVulnerabilityScanner tool "\"OpenVAS\""
+par NetworkSecurityModel.creditCardVulnerabilityScanner scanInterval 60s
+attr unit s
+par NetworkSecurityModel.financeDummySink typename "\"DummySink\""
+par NetworkSecurityModel.creditCardDummySink typename "\"DummySink\""
+par NetworkSecurityModel typename "\"NetworkSecurityModel\""
+
