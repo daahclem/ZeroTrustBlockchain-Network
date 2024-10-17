@@ -1,0 +1,3 @@
+package networksecuritymodel;
+
+@license(LGPL);
